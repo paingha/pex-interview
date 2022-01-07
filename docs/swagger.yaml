@@ -1,0 +1,54 @@
+basePath: /v1
+host: localhost:8080
+info:
+  contact:
+    email: apaingha@gmail.com
+    name: Paingha Joe Alagoa
+    url: https://github.com/paingha
+  description: This is a technical challenge entry for PEX.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: PEX Interview API
+  version: "1.0"
+paths:
+  /fibonacci/current:
+    get:
+      consumes:
+      - application/json
+      description: get the current fibonacci number in the sequence
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+      summary: Current Fibonacci number
+  /fibonacci/next:
+    post:
+      consumes:
+      - application/json
+      description: get the next fibonacci number in the sequence
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+      summary: Next Fibonacci number
+  /fibonacci/previous:
+    post:
+      consumes:
+      - application/json
+      description: get the previous fibonacci number in the sequence
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+      summary: Previous Fibonacci number
+swagger: "2.0"

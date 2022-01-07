@@ -12,3 +12,11 @@
 
 🤗 Pex Fibonacci API in Golang by Paingha Joe Alagoa. 
 
+## Try it out!
+
+* Run
+
+```bash
+make run
+```
+* Navigate to http://localhost:8080/swagger/index.html
