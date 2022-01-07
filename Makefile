@@ -20,4 +20,4 @@ test-coverage:
 
 .PHONY: lint
 lint:
-	@golint
+	golangci-lint run ./...
