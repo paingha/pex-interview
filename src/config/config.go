@@ -16,15 +16,18 @@ var (
 	ErrIsADir = errors.New("path is a directory not a file")
 )
 
+// SystemConfig
 type SystemConfig struct {
 	Environment string `yaml:"env"`
 	Port        string `yaml:"port"`
 }
 
+// NewSystemConfig creates a new system config.
 func NewSystemConfig() *SystemConfig {
 	return &SystemConfig{}
 }
 
+// NewENV creates a new environment.
 func NewENV(db *models.FibonacciDataStore, logger *lib.Log) *controllers.Env {
 	return &controllers.Env{
 		Db:     db,
@@ -32,6 +35,7 @@ func NewENV(db *models.FibonacciDataStore, logger *lib.Log) *controllers.Env {
 	}
 }
 
+// InitSystemConfig initializes a system config with a config yaml file.
 func InitSystemConfig(path string) (*SystemConfig, error) {
 	if path == "" {
 		configFilePath, err := parseFlags()
