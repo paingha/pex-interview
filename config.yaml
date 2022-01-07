@@ -1,0 +1,2 @@
+env: debug
+port: ":8080"

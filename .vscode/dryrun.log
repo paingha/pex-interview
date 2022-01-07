@@ -1,0 +1,7 @@
+make: Entering directory `/Users/painghaalagoa/go/src/github.com/paingha/pex'
+go run main.go -config config.yaml
+make: Leaving directory `/Users/painghaalagoa/go/src/github.com/paingha/pex'
+ 
+Makefile:7: warning: overriding commands for target `run'
+Makefile:3: warning: ignoring old commands for target `run'
+ 
