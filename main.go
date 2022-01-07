@@ -47,9 +47,5 @@ func main() {
 	if err := srv.Shutdown(ctx); err != nil {
 		logger.Fatal("API", lib.FormatErrorMessage("Server Shutdown:", err), lib.FileZone())
 	}
-	select {
-	case <-ctx.Done():
-		logger.Info("API", "timeout of 5 seconds.", lib.FileZone())
-	}
 	logger.Info("API", "Server exiting", lib.FileZone())
 }
