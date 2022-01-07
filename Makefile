@@ -13,3 +13,7 @@ test:
 .PHONY: coverage
 coverage:
 	go test -v
+
+.PHONY: lint
+lint:
+	@golint -set_exit_status ${PKG_LIST}
