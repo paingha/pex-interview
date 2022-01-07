@@ -35,7 +35,7 @@ func TestPrevious(t *testing.T) {
 	r.ServeHTTP(w, req)
 
 	assert.Equal(t, http.StatusOK, w.Code)
-	assert.Equal(t, "1", w.Body.String())
+	assert.Equal(t, "0", w.Body.String())
 }
 
 func TestCurrent(t *testing.T) {
@@ -47,5 +47,5 @@ func TestCurrent(t *testing.T) {
 	req, _ := http.NewRequest(http.MethodGet, routes.FibonacciRootRoute+routes.CurrentFibonacciNumberPath, nil)
 	r.ServeHTTP(w, req)
 	assert.Equal(t, http.StatusOK, w.Code)
-	assert.Equal(t, "1", w.Body.String())
+	assert.Equal(t, "0", w.Body.String())
 }

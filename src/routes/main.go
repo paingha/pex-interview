@@ -9,7 +9,6 @@ import (
 func SetupRouter(env *controllers.Env) *gin.Engine {
 	r := gin.Default()
 	{
-		//RootRouter(r)
 		FibonacciRouter(r, env)
 	}
 	return r

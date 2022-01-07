@@ -44,7 +44,7 @@ func (f *FibonacciDataStore) Next() int {
 func (f *FibonacciDataStore) Previous() int {
 	f.Lock()
 	defer f.Unlock()
-	if f.Counter >= 0 {
+	if f.Counter >= 1 {
 		f.Counter = f.Counter - 1
 	}
 	f.FibonacciNumber = lib.FibonacciSequence(f.Counter)

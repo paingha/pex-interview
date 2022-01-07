@@ -14,7 +14,7 @@ import (
 
 func TestNewSystemConfig(t *testing.T) {
 	sysConfig := config.NewSystemConfig()
-	assert.NotEmpty(t, sysConfig)
+	assert.Empty(t, sysConfig)
 }
 
 func TestNewENV(t *testing.T) {
@@ -32,7 +32,6 @@ func TestInitSystemConfig(t *testing.T) {
 	filePath := fmt.Sprintf("/%s/%s", dir, "config.yaml")
 	err = os.WriteFile(filePath, fileContents, 0644)
 	assert.NoError(t, err)
-	t.Log(filePath)
 	sysConfig, err := config.InitSystemConfig(filePath)
 	assert.NoError(t, err)
 	assert.NotEmpty(t, sysConfig)
